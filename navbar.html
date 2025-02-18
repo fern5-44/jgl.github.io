@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Schrift */
+body {
+  margin: 0;
+  font-family: courier;
+}
+
+h4 {
+  font-size: 30px;
+  font-family: courier;
+}
+
+/* NAVIGATION */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #7F7F6F;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  background-color: white;
+  color: #7F7F6F;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #7F7F6F;
+  position: fixed; /* Fixiert die Navigationsleiste */
+  top: 0; /* Fixiert sie oben am Bildschirm */
+  width: 100%; /* Volle Breite */
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: #A7AC9C;
+  color: white;
+}
+
+/* navigationsbar - style */
+.navbar {
+  overflow: hidden;
+  background-color: #7F7F6F;
+  font-family: Helvetica;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block; /* Korrigiert den Tippfehler von "bolck" */
+  font-size: 16px;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 17px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Sidenav I -->
+<div id="SideONE" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://fern5-44.github.io/jgl.github.io/Sites/songs.html">JGL</a>
+  <a href="https://fern5-44.github.io/jgl.github.io/Sites/inputs.html">Kleingruppe</a>
+  <a href="https://fern5-44.github.io/jgl.github.io/Sites/gedichte.html">Festivals</a>
+  <a href="https://fern5-44.github.io/jgl.github.io/Sites/eindrucke.html">Rückblick</a>
+</div>
+
+
+<!-- Top Navigation Bar -->
+<div class="topnav">
+  <a href="https://fern5-44.github.io/jgl.github.io">Home</a>
+  <a href="javascript:void(0)" style="font-size:25px;cursor:pointer" onclick="openNav()">Angebot</a>
+  <a href="https://fern5-44.github.io/jgl.github.io/reference.html">Idee</a>
+    <a href="https://fern5-44.github.io/jgl.github.io/reference.html">Kontakt</a>
+</div>
+
+<!-- Main content area -->
+<div id="main">
+  <!-- Optional main content goes here -->
+</div>
+
+<!-- Scripts to control side navigation -->
+<script>
+  // Funktion zum Öffnen der Seitenleiste
+  function openNav() {
+    document.getElementById("SideONE").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  // Funktion zum Schließen der Seitenleiste
+  function closeNav() {
+    document.getElementById("SideONE").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+</script>
+
+</body>
+</html>
