@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("navbar-container").innerHTML = data;
 
       // Sidebar-Steuerung mit neu geladenen Elementen verbinden
-      document.querySelector(".sidenav .closebtn").onclick = closeNav;
-      document.querySelector(".topnav a").onclick = openNav;
+      document.querySelector(".sidenav .closebtn")?.addEventListener("click", closeNav);
+      document.querySelector(".topnav a")?.addEventListener("click", openNav);
     })
     .catch(error => console.error("Error loading navbar:", error));
 });
 
 function openNav() {
-  const sidenav = document.getElementById("mySidenav");
+  const sidenav = document.getElementById("SideONE");
   const main = document.getElementById("main");
 
   if (sidenav && main) {
@@ -24,7 +24,7 @@ function openNav() {
 }
 
 function closeNav() {
-  const sidenav = document.getElementById("mySidenav");
+  const sidenav = document.getElementById("SideONE");
   const main = document.getElementById("main");
 
   if (sidenav && main) {
@@ -36,9 +36,9 @@ function closeNav() {
 }
 
 // Footer laden
-  fetch("https://fern5-44.github.io/jgl.github.io/tool/footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer-container").innerHTML = data;
-    })
-    .catch(error => console.error("Error loading footer:", error));
+fetch("https://fern5-44.github.io/jgl.github.io/tool/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer-container").innerHTML = data;
+  })
+  .catch(error => console.error("Error loading footer:", error));
