@@ -1,3 +1,4 @@
+<head>
 <style>
 * {
   box-sizing: border-box;
@@ -16,18 +17,19 @@ body {
 
 h1 {
     font-size: 300%;
-    color: #304d35; /* Dunkles Grün */
+    color: #21201E; /* Black */
     margin-bottom: 20px; /* Fügt Abstand zum nächsten Element hinzu */
 }
 
+
 p {
     font-size: 110%;
-    color: #4a4a4a;
+    color: #4a4a4a; /* grau */
 }
 
 b { /*für Footer*/
     font-size: 50%;
-    color: white;
+    color: #21201E;
 }
 /* Gruppen */
 main {
@@ -64,3 +66,5 @@ a:hover {
     text-decoration: underline; /* Links bei Hover unterstreichen */
 }
 </style>
+<title>JGL</title>
+</head>
