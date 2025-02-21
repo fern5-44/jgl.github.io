@@ -1,0 +1,66 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Schrift */
+body {
+    font-family: 'Georgia', serif; /* Elegante und natürliche Schriftart */
+    margin: 0;
+    padding: 0;
+    display: block; /* Ändert display von 100% zu block */
+    height: 100vh;
+    color: #4a4a4a;
+    background-color: #f9f8f4; /* Warmes, neutrales Hintergrund */
+}
+
+h1 {
+    font-size: 300%;
+    color: #304d35; /* Dunkles Grün */
+    margin-bottom: 20px; /* Fügt Abstand zum nächsten Element hinzu */
+}
+
+p {
+    font-size: 110%;
+    color: #4a4a4a;
+}
+
+b { /*für Footer*/
+    font-size: 50%;
+    color: white;
+}
+/* Gruppen */
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Sicherstellen, dass main den gesamten Raum ausfüllt */
+}
+
+/* Tabellen */
+table {
+    border-collapse: collapse;
+    width: 80%; /* Tabellenbreite auf 80% setzen */
+    margin-top: 20px; /* Fügt Abstand zum oberen Bereich hinzu */
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left; /* Text in der Tabelle links ausrichten */
+}
+
+/* Links */
+a {
+    color: #304d35; /* Dunkles Grün für Links */
+    text-decoration: none; /* Unterstreichung entfernen */
+}
+
+a:hover {
+    color: #4a6e53; /* Hover-Effekt mit hellerem Grün */
+    text-decoration: underline; /* Links bei Hover unterstreichen */
+}
+</style>
