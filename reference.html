@@ -1,22 +1,211 @@
+
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  .main { padding: 16px; margin-top: 60px; height: auto; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fern5-44.github.io/fleur.github.io/tool/styles.css"> <!-- Falls du CSS auslagerst -->
+<title>blumennaturica</title>
+<style>	  
+		  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+	
+input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #339933;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hidden Sections */
+  .hidden {
+    display: none;
+}
+
+/* Visible Sections */
+  .visible {
+    display: block;
+}
+
+</style>
+	
 </head>
 
-<body>
-  <!-- Container für die Navigationsleiste -->
+	
+<body style="background-color:white;">
+ <!-- Container für die Navigationsleiste -->
   <div id="navbar-container"></div>
+<!-- INHALT -->
 <div class="main">
-<h1>JGL</h1>
+<h1><br>Wer sind wir?</h1>
+<h1><br>Kontaktformular</h1>
+  <p>Bei Fragen und Feedback das entsprechende Feld auswählen.</p>
 
+  <div class="container">
+    <form>
+      <!-- Name -->
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" placeholder="Vorname Name.." required>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" placeholder="Email.." required>
+        </div>
+      </div>
+
+
+      <!-- Issue -->
+      <div class="row">
+        <div class="col-25">
+          <label for="issue">Kategorie</label>
+        </div>
+        <div class="col-75">
+          <select id="issue" name="issue" onchange="updateVisibility()">
+            <option value="registration">Fragen</option>
+            <option value="question">Anmeldung</option>
+            <option value="feedback">Feedback & Ideen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Kurs Anmeldung -->
+      <div id="registration-section" class="nohidden">
+        <div class="row">
+          <div class="col-25">
+	<label for="course">Fragen</label>
+         </div>
+          <div class="col-75">
+            <textarea id="question" name="question" placeholder="Stellen Sie Ihre Frage..." style="height:200px"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragen -->
+      <div id="question-section" class="hidden">
+        <div class="row">
+          <div class="col-25">
+            <label for="question">Fragen</label>
+             </div>
+          <div class="col-75">
+            <select id="course" name="course">
+              <option value="22-12-morning">22.12.2024 - 09:30-12:00</option>
+              <option value="22-12-evening">22.12.2024 - 19:00-21:30</option>
+	      <option value="08-01-morning">08.01.2025 - 09:30-12:00</option>
+              <option value="08-01-evening">08.01.2025 - 19:00-21:30</option>
+  	      <option value="08-01-evening">12.01.2025 - 15:00-17:30</option>
+            </select>
+	 </div
+          
+        </div>
+      </div>
+
+      <!-- Feedback -->
+      <div id="feedback-section" class="hidden">
+        <div class="row">
+          <div class="col-25">
+            <label for="feedback">Feedback & Ideen</label>
+          </div>
+          <div class="col-75">
+            <textarea id="feedback" name="feedback" placeholder="Stellen Sie Ihre Frage..." style="height:200px"></textarea>
+          </div>
+        </div>
+      </div>
+	    
+      <!-- Submit -->
+      <div class="row">
+	<br>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
   </div>
+</div>
+
+<script>
+  function updateVisibility() {
+    const issue = document.getElementById("issue").value;
+
+    // Hide all sections
+    document.getElementById("registration-section").classList.add("hidden");
+    document.getElementById("question-section").classList.add("hidden");
+    document.getElementById("feedback-section").classList.add("hidden");
+
+    // Show selected section
+    if (issue === "registration") {
+      document.getElementById("registration-section").classList.remove("hidden");
+    } else if (issue === "question") {
+      document.getElementById("question-section").classList.remove("hidden");
+    } else if (issue === "feedback") {
+      document.getElementById("feedback-section").classList.remove("hidden");
+    }
+  }
+</script>
+<br>
+<h1>Kontakdaten</h1>
+<p>Tabea Stolz<br>tabea.stolz@mail.com<br>071 123 45 67</p>
+
+
+</div>
 
 </body>
-
-  <!-- JavaScript einfügen -->
-  <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
 </html>
