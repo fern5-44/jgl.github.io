@@ -92,28 +92,30 @@
   height: auto; 
   text-align: center; /* Zentriert den gesamten Inhalt */
 }
-.portrait-container {
+  
+  .portrait-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-  }
+}
 
-  .portrait {
+.portrait {
     text-align: center;
     width: 200px;
-  }
+}
 
-  .portrait img {
-    width: 100%;
-    height: auto;
+.portrait img {
+    width: 200px;  /* Einheitliche Breite */
+    height: 250px; /* Einheitliche Höhe */
+    object-fit: cover; /* Schneidet das Bild zu, um es proportional zu füllen */
     border-radius: 10px;
-  }
+}
 
-  .portrait p {
+.portrait p {
     margin-top: 10px;
     font-size: 14px;
-  }
+}
 </style>
 </head>
 
@@ -126,20 +128,16 @@
     <h1>Wer sind wir?</h1>
     <div class="portrait-container">
   <div class="portrait">
-    <img src="bild1.jpg" alt="Bild 1">
-    <p>Tabea Stolz</p>
-  </div>
-  <div class="portrait">
-    <img src="bild2.jpg" alt="Bild 2">
-    <p>Jessica Zellweger</p>
-  </div>
-  <div class="portrait">
-    <img src="bild3.jpg" alt="Bild 3">
+    <img src="https://fern5-44.github.io/jgl.github.io/pic/we/jael.PNG" alt="JAEL" height="600" width="500">
     <p>Jael Schadegg</p>
   </div>
   <div class="portrait">
-    <img src="bild4.jpg" alt="Bild 4">
-    <p>Sarah Erni</p>
+<img src="https://fern5-44.github.io/jgl.github.io/pic/we/jezel.JPEG" alt="JESSICA" height="600" width="500">
+<p>Jessica Zellweger</p>
+  </div>
+    <div class="portrait">
+<img src="https://fern5-44.github.io/jgl.github.io/pic/we/ser.PNG" alt="First Snow" height="800" width="500">    
+<p>Sarah Erni</p>
   </div>
 </div>
 
