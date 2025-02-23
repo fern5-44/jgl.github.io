@@ -8,6 +8,25 @@
 <style>
   /* Responsive Anpassung */
  @media screen and (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-25, .col-75 {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  input[type=submit] {
+    width: 100%; 
+    text-align: center;
+  }
   .portrait-container {
     flex-direction: column;
     align-items: center;
