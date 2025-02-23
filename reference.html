@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fern5-44.github.io/jgl.github.io/tool/styles.css">
 <title>JGL</title>
 <style>
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
+  /* Responsive Anpassung */
+ @media screen and (max-width: 600px) {
+  .portrait-container {
+    flex-direction: column;
+    align-items: center;
   }
+}
 
+  /* Formularelemente */
   input[type=text], input[type=email], input[type=tel], select, textarea {
     width: 100%;
     padding: 12px;
@@ -59,21 +60,14 @@
     margin-top: 6px;
   }
 
-  /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
 
-  /* Hidden Sections */
   .hidden {
     display: none;
-  }
-
-  /* Visible Sections */
-  .visible {
-    display: block;
   }
 
   .fa {
@@ -92,22 +86,73 @@
     background: #125688;
     color: white;
   }
+.main { 
+  padding: 16px; 
+  margin-top: 60px; 
+  height: auto; 
+  text-align: center; /* Zentriert den gesamten Inhalt */
+}
+.portrait-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .portrait {
+    text-align: center;
+    width: 200px;
+  }
+
+  .portrait img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .portrait p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
 </style>
 </head>
 
 <body style="background-color:white;">
-  <!-- Container für die Navigationsleiste -->
+  <!-- Navigationsleiste -->
   <div id="navbar-container"></div>
 
-  <!-- INHALT -->
+  <!-- Inhalt -->
   <div class="main">
-    <h1><br>Wer sind wir?</h1>
-    <h1><br>Die Idee</h1>
-    <h1><br>Kontaktformular</h1>
-    <p>Schreibe uns per Mail <a href="mailto:jgl-bzell@gmail.com">jgl-bzell@gmail.com</a> oder kontaktiere uns über das Kontaktformular. <br>Bei Fragen und Feedback das entsprechende Feld auswählen.</p>
+    <h1>Wer sind wir?</h1>
+    <div class="portrait-container">
+  <div class="portrait">
+    <img src="bild1.jpg" alt="Bild 1">
+    <p>Tabea Stolz</p>
+  </div>
+  <div class="portrait">
+    <img src="bild2.jpg" alt="Bild 2">
+    <p>Jessica Zellweger</p>
+  </div>
+  <div class="portrait">
+    <img src="bild3.jpg" alt="Bild 3">
+    <p>Jael Schadegg</p>
+  </div>
+  <div class="portrait">
+    <img src="bild4.jpg" alt="Bild 4">
+    <p>Sarah Erni</p>
+  </div>
+</div>
+
+    <h1>Die Idee</h1>
+    <p>Die neue Jugendgruppe baut auf dem Vers Matthäus 18:20 auf: "Denn wo zwei oder drei in meinem Namen zusammenkommen, bin ich in ihrer Mitte". 
+    Mit dem Namen Gathered Light („Versammeltes Licht“) wollen wir genau das ausdrücken, was in diesem Vers steht: Uns versammeln, um Gott zu loben und ihn besser kennenzulernen. 
+    Die JGL ist für Jugendliche ab Abschluss der Sekundarschule, die den Wunsch haben, in ihrem Glauben zu wachsen, neue Freundschaften zu schließen und gemeinsam Spaß zu haben.</p>
+
+    <h1>Kontaktformular</h1>
+    <p>Schreibe uns per Mail <a href="mailto:jgl-bzell@gmail.com">jgl-bzell@gmail.com</a> oder kontaktiere uns über das Formular. <br>Bei Fragen und Feedback die entsprechende Kategorie wählen.</p>
 
     <div class="container">
-      <form>
+      <form method="post">
         <!-- Name -->
         <div class="row">
           <div class="col-25">
@@ -128,7 +173,7 @@
           </div>
         </div>
 
-        <!-- Issue -->
+        <!-- Kategorie -->
         <div class="row">
           <div class="col-25">
             <label for="issue">Kategorie</label>
@@ -146,7 +191,7 @@
         <div id="registration-section" class="hidden">
           <div class="row">
             <div class="col-25">
-              <label for="course">Fragen</label>
+              <label for="question">Fragen</label>
             </div>
             <div class="col-75">
               <textarea id="question" name="question" placeholder="Stellen Sie Ihre Frage..." style="height:200px"></textarea>
@@ -158,7 +203,7 @@
         <div id="question-section" class="hidden">
           <div class="row">
             <div class="col-25">
-              <label for="question">Fragen</label>
+              <label for="course">Kurs wählen</label>
             </div>
             <div class="col-75">
               <select id="course" name="course">
@@ -166,7 +211,7 @@
                 <option value="22-12-evening">22.12.2024 - 19:00-21:30</option>
                 <option value="08-01-morning">08.01.2025 - 09:30-12:00</option>
                 <option value="08-01-evening">08.01.2025 - 19:00-21:30</option>
-                <option value="08-01-evening">12.01.2025 - 15:00-17:30</option>
+                <option value="12-01-afternoon">12.01.2025 - 15:00-17:30</option>
               </select>
             </div>
           </div>
@@ -179,30 +224,25 @@
               <label for="feedback">Feedback & Ideen</label>
             </div>
             <div class="col-75">
-              <textarea id="feedback" name="feedback" placeholder="Stellen Sie Ihre Frage..." style="height:200px"></textarea>
+              <textarea id="feedback" name="feedback" placeholder="Schreibe dein Feedback hier..." style="height:200px"></textarea>
             </div>
           </div>
         </div>
 
-        <!-- Submit -->
+        <!-- Absenden -->
         <div class="row">
-          <br>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Absenden">
         </div>
       </form>
     </div>
-  </div>
 
   <script>
     function updateVisibility() {
-      const issue = document.getElementById("issue").value;
-
-      // Hide all sections
       document.getElementById("registration-section").classList.add("hidden");
       document.getElementById("question-section").classList.add("hidden");
       document.getElementById("feedback-section").classList.add("hidden");
 
-      // Show selected section
+      const issue = document.getElementById("issue").value;
       if (issue === "registration") {
         document.getElementById("registration-section").classList.remove("hidden");
       } else if (issue === "question") {
@@ -212,18 +252,17 @@
       }
     }
   </script>
-  
-  <br>
-  <h1>Kontaktdaten</h1>
-  <p>Tabea Stolz<br>076 255 57 71<br>tabea.stolz@mail.com</p>
-  <p>Jessica Zellweger<br>Jael Schadegg<br>Sarah Erni<br></p>
 
-  <h3>Folgen & Teilen</h3>
+  <h1>Kontaktdaten</h1>
+  <p>Tabea Stolz<br>076 255 57 71<br>tabea.stolz@internetkirche.ch</p>
+   <p>Angela Bacher<br>079 307 16 87<br>angela.bacher@internetkirche.ch</p> 
+   <p>Marija Neururer<br>076 720 06 49<br>marija.neururer@pastoralraum-bischofsberg.ch</p> 
+
+  <h1>Folgen & Teilen</h1>
   <a href="#" class="fa fa-instagram"> - Folge uns auf Instagram</a>
   <br><br>
   <a href="flyer.com">Flyer "JGL"</a>
-
-  <!-- JavaScript einfügen -->
+</div>
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
 </body>
 </html>
