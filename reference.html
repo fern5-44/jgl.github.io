@@ -103,10 +103,6 @@
     opacity: 0.7;
 }
 
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
 .main { 
   padding: 16px; 
   margin-top: 60px; 
@@ -137,6 +133,53 @@
     margin-top: 10px;
     font-size: 14px;
 }
+
+   /* More About Buttons */
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s;
+  }
+
+  .link-button i {
+    font-size: 20px;
+  }
+
+  .link-button:hover {
+    background-color: #21201E;
+    color: #C8BEAB;
+  }
+
+  /* Farben für die Buttons */
+    .website {
+    background-color: #808066;
+  }
+
+  .instagram {
+    background-color: #808066;
+  }
+
+  .email {
+    background-color: #808066;
+  }
+    
 </style>
 </head>
 
@@ -169,7 +212,7 @@
 
 
     <h1>Kontaktformular</h1>
-    <p>Schreibe uns per Mail <a href="mailto:jgl-bzell@gmail.com">jgl-bzell@gmail.com</a> oder kontaktiere uns über das Formular. <br>Bei Fragen und Feedback die entsprechende Kategorie wählen.</p>
+    <p>Schreibe uns per Mail <a href="mailto:jgl.bzell@gmail.com">jgl.bzell@gmail.com</a> oder kontaktiere uns über das Formular. <br>Bei Fragen und Feedback die entsprechende Kategorie wählen.</p>
 
     <div class="container">
       <form method="post">
@@ -275,15 +318,35 @@
 
   <h1>Kontaktdaten</h1>
   <p>Bei persönlichen Fragen stehen dir gerne die Jugendarbeiterinnen der reformierten und katholischen Kirche zur Verfügung.</p>
+   <center>
+    <div class="portrait">
+    <img src="https://internetkirche.ch/userdata/images/ueber-uns/personen/tabea-stolz.jpg" alt="TABEA" height="600" width="500">
+  </div>
   <p>Tabea Stolz<br>076 255 57 71<br>tabea.stolz@internetkirche.ch</p>
+    <div class="portrait">
+    <img src="https://internetkirche.ch/assets/image-cache/images/ueber-uns/personen/angela-bacher.6f453af4.webP" alt="ANGELA" height="600" width="500">
+  </div>
    <p>Angela Bacher<br>079 307 16 87<br>angela.bacher@internetkirche.ch</p> 
+    <div class="portrait">
+    <img src="https://pastoralraum-bischofsberg.ch/wp-content/uploads/2024/09/Marija-Neururer.jpg" alt="MAIJA" height="600" width="500">
+  </div>
    <p>Marija Neururer<br>076 720 06 49<br>marija.neururer@pastoralraum-bischofsberg.ch</p> 
+</center>
 
-  <h1>Folgen & Teilen</h1>
-  <a href="https://www.instagram.com/jugendgruppe_gatheredlight/" class="fa fa-instagram"></a><p> - Folge uns auf Instagram</p>
+<!-- More About Section -->
+    <h1>More About</h1>
+    <div class="link-container">
+      <a href="https://internetkirche.ch/kind-und-jugend/jugendgruppe-gathered-light.html" target="_blank" class="link-button website">
+        <i class="fa fa-globe"></i> Website
+      </a>
+      <a href="https://www.instagram.com/jugendgruppe_gatheredlight/" target="_blank" class="link-button instagram">
+        <i class="fa fa-instagram"></i> Instagram
+      </a>
+      <a href="mailto:jgl.bzell@gmail.com" target="_blank" class="link-button email">
+        <i class="fa fa-envelope"></i> E-Mail
+      </a>
+    </div>
 
-  <br><br>
-  <a href="pic/flyer.JPEG">Flyer "JGL"</a>
 </div>
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
 </body>
