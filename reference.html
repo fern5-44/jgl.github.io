@@ -134,52 +134,42 @@
     font-size: 14px;
 }
 
-   /* More About Buttons */
-  .link-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+
+/* Follow & More Sektion */
+  .follow-more {
+      text-align: center;
+      margin: 20px 0;
   }
 
-  .link-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    max-width: 300px;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    transition: opacity 0.3s;
+  .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
   }
 
-  .link-button i {
-    font-size: 20px;
+  .website {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background-color: #7F7F6F;
+      color: #E8E2D4;
+      text-decoration: none;
+      border-radius: 50%;
+      font-size: 40px;
+      transition: background 0.3s ease;
   }
 
-  .link-button:hover {
-    background-color: #21201E;
-    color: #C8BEAB;
+  .website i {
+      font-size: 40px;
   }
 
-  /* Farben für die Buttons */
-    .website {
-    background-color: #808066;
+  .website:hover {
+      background-color: #6A6A5F;
   }
-
-  .instagram {
-    background-color: #808066;
-  }
-
-  .email {
-    background-color: #808066;
-  }
-    
 </style>
 </head>
 
@@ -207,6 +197,10 @@
     <div class="portrait">
 <img src="https://fern5-44.github.io/jgl.github.io/pic/we/ser.PNG" alt="First Snow" height="800" width="500">    
 <p>Sarah Erni</p>
+  </div>
+      <div class="portrait">
+<img src="https://fern5-44.github.io/jgl.github.io/pic/we/jonas.JPEG" alt="First Snow" height="800" width="500">    
+<p>Jonas</p>
   </div>
 </div>
 
@@ -319,6 +313,7 @@
   <h1>Kontaktdaten</h1>
   <p>Bei persönlichen Fragen stehen dir gerne die Jugendarbeiterinnen der reformierten und katholischen Kirche zur Verfügung.</p>
    <center>
+   
     <div class="portrait">
     <img src="https://internetkirche.ch/userdata/images/ueber-uns/personen/tabea-stolz.jpg" alt="TABEA" height="600" width="500">
   </div>
@@ -332,20 +327,18 @@
   </div>
    <p>Marija Neururer<br>076 720 06 49<br>marija.neururer@pastoralraum-bischofsberg.ch</p> 
 </center>
-
-<!-- More About Section -->
-    <h1>More About</h1>
-    <div class="link-container">
-      <a href="https://internetkirche.ch/kind-und-jugend/jugendgruppe-gathered-light.html" target="_blank" class="link-button website">
-        <i class="fa fa-globe"></i> Website
-      </a>
-      <a href="https://www.instagram.com/jugendgruppe_gatheredlight/" target="_blank" class="link-button instagram">
-        <i class="fa fa-instagram"></i> Instagram
-      </a>
-      <a href="mailto:jgl.bzell@gmail.com" target="_blank" class="link-button email">
-        <i class="fa fa-envelope"></i> E-Mail
-      </a>
-    </div>
+<h1>Follow & More</h1>
+      <div class="follow-more">
+          <div class="social-links">
+              
+              <a href="https://www.instagram.com/jugendgruppe_gatheredlight/" target="_blank" class="website">
+                  <i class="fa fa-instagram"></i></a>
+              <a href="mailto:jgl.bzell@gmail.com" target="_blank" class="website">
+                  <i class="fa fa-envelope"></i></a>
+              <a href="https://fern5-44.github.io/jgl.github.io/pic/flyer.JPEG" target="_blank" class="website">
+                  <i class="bi bi-star-fill"></i></a>
+          </div>
+      </div>
 
 </div>
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
