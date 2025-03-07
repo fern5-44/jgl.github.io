@@ -5,122 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fern5-44.github.io/jgl.github.io/tool/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 <title>JGL</title>
 <style>
-  /* Responsive Anpassung */
- @media screen and (max-width: 600px) {
-  .row {
-    display: flex;
-    flex-direction: column;
-  }
+/* Allgemeine Stile */
 body {
-            font-family: "Georgia", serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            background-color: #C8BEAB;
-            color: #21201E;
-        }
-        
-        .main { 
-  padding: 16px; 
-  margin-top: 60px; 
-  height: auto; 
-  text-align: center; /* Zentriert den gesamten Inhalt */
-}
-        
-  .col-25, .col-75 {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  input[type=text], input[type=email], select, textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  input[type=submit] {
-    width: 100%; 
+    font-family: "Georgia", serif;
     text-align: center;
-  }
-  .portrait-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    background-color: #C8BEAB;
+    color: #21201E;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-  /* Formularelemente */
-  input[type=text], input[type=email], input[type=tel], select, textarea {
+/* Hauptinhalt */
+.main {
+    padding: 16px;
+    margin-top: 60px;
+    height: auto;
+    text-align: center;
+}
+
+/* Formular- und Eingabefelder */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-  }
+}
 
-  label {
-    padding: 12px 12px 12px 0;
+label {
+    padding: 12px 0;
     display: inline-block;
-  }
+}
 
-  input[type=submit] {
-    background-color: grey;
-    color: white;
+input[type="submit"] {
+    background-color: #7F7F6F;
+    color: #E8E2D4;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     float: right;
-  }
+}
 
-  input[type=submit]:hover {
-    background-color: #339933;
-  }
+input[type="submit"]:hover {
+       background-color: #21201E;
+    color: #C8BEAB;
+}
 
-  .container {
+/* Container */
+.container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  }
+}
 
-  .col-25 {
-    float: left;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.col-25 {
     width: 25%;
     margin-top: 6px;
-  }
+}
 
-  .col-75 {
-    float: left;
+.col-75 {
     width: 70%;
     margin-top: 6px;
-  }
+}
 
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
-  .hidden {
+/* Versteckte Elemente */
+.hidden {
     display: none;
-  }
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
 }
 
-.fa:hover {
-    opacity: 0.7;
+/* Responsive Anpassung */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-25,
+    .col-75 {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        text-align: center;
+    }
+
+    .portrait-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-
-  
-  .portrait-container {
+/* Portrait-Bereich */
+.portrait-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -133,9 +132,9 @@ body {
 }
 
 .portrait img {
-    width: 200px;  /* Einheitliche Breite */
-    height: 250px; /* Einheitliche Höhe */
-    object-fit: cover; /* Schneidet das Bild zu, um es proportional zu füllen */
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -145,41 +144,49 @@ body {
 }
 
 
-/* Follow & More Sektion */
-  .follow-more {
-      text-align: center;
-      margin: 20px 0;
-  }
 
-  .social-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-  }
+/* Links & Buttons */
 
-  .website {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80px;
-      height: 80px;
-      background-color: #7F7F6F;
-      color: #E8E2D4;
-      text-decoration: none;
-      border-radius: 50%;
-      font-size: 40px;
-      transition: background 0.3s ease;
-  }
+a {
+    
+    color: #7F7F6F;
+    
+}
+ /* Buttons */
+.link-container {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-  .website i {
-      font-size: 40px;
-  }
+ai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #7F7F6F;
+    color: #E8E2D4;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
 
-  .website:hover {
-      background-color: #6A6A5F;
-  }
+ai:hover {
+    background-color: #21201E;
+    color: #C8BEAB;
+}
+
+i {
+    font-size: 20px;
+}
 </style>
 </head>
 
@@ -189,7 +196,7 @@ body {
 
   <!-- Inhalt -->
   <div class="main">
-      <h1>Die Idee</h1>
+      <br><br><br><h1>Die Idee</h1>
     <p>Die neue Jugendgruppe baut auf dem Vers Matthäus 18:20 auf: "Denn wo zwei oder drei in meinem Namen zusammenkommen, bin ich in ihrer Mitte". 
     Mit dem Namen Gathered Light („Versammeltes Licht“) wollen wir genau das ausdrücken, was in diesem Vers steht: Uns versammeln, um Gott zu loben und ihn besser kennenzulernen. 
     Die JGL ist für Jugendliche ab Abschluss der Sekundarschule, die den Wunsch haben, in ihrem Glauben zu wachsen, neue Freundschaften zu schließen und gemeinsam Spaß zu haben.</p>
@@ -327,28 +334,26 @@ body {
     <div class="portrait">
     <img src="https://internetkirche.ch/userdata/images/ueber-uns/personen/tabea-stolz.jpg" alt="TABEA" height="600" width="500">
   </div>
-  <p>Tabea Stolz<br>076 255 57 71<br>tabea.stolz@internetkirche.ch</p>
+  <p>Tabea Stolz</p>
+  <a href="tel:+41 76 255 57 71">+41 76 255 57 71</a><br><a href="mailto:tabea.stolz@internetkirche.ch">tabea.stolz@internetkirche.ch<br><br><br></a>
     <div class="portrait">
     <img src="https://internetkirche.ch/assets/image-cache/images/ueber-uns/personen/angela-bacher.6f453af4.webP" alt="ANGELA" height="600" width="500">
   </div>
-   <p>Angela Bacher<br>079 307 16 87<br>angela.bacher@internetkirche.ch</p> 
+    <p>Angela Bacher</p>
+   <a href="tel:+41 79 307 16 87">+41 79 307 16 87</a><br><a href="mailto:angela.bacher@internetkirche.ch">angela.bacher@internetkirche.ch<br><br><br></a>
     <div class="portrait">
-    <img src="https://pastoralraum-bischofsberg.ch/wp-content/uploads/2024/09/Marija-Neururer.jpg" alt="MAIJA" height="600" width="500">
+    <img src="https://pastoralraum-bischofsberg.ch/wp-content/uploads/2024/09/Marija-Neururer.jpg" alt="MARIJA" height="600" width="500">
   </div>
-   <p>Marija Neururer<br>076 720 06 49<br>marija.neururer@pastoralraum-bischofsberg.ch</p> 
+   <p>Marija Neururer</p><a href="tel:+41 76 720 06 49">+41 76 720 06 49</a><br><a href="mailto:marija.neururer@pastoralraum-bischofsberg.ch">marija.neururer@pastoralraum-bischofsberg.ch</a>
 </center>
-<h1>Follow & More</h1>
-      <div class="follow-more">
-          <div class="social-links">
-              
-              <a href="https://www.instagram.com/jugendgruppe_gatheredlight/" target="_blank" class="website">
-                  <i class="fa fa-instagram"></i></a>
-              <a href="mailto:jgl.bzell@gmail.com" target="_blank" class="website">
-                  <i class="fa fa-envelope"></i></a>
-              <a href="https://fern5-44.github.io/jgl.github.io/pic/flyer.JPEG" target="_blank" class="website">
-                  <i class="bi bi-star-fill"></i></a>
-          </div>
-      </div>
+<br>
+    <h1>More About</h1>
+    <div class="link-container">
+        <ai href="https://internetkirche.ch/kind-und-jugend/jugendgruppe-gathered-light.html" target="_blank"><i class="fas fa-globe"></i>Reformierte Kirche</ai>
+        <ai href="https://pastoralraum-bischofsberg.ch/kinder-und-jugendarbeit/"target="_blank"><i class="fas fa-globe"></i>Katholische Kirche</ai>
+        <ai href="https://www.instagram.com/jugendgruppe_gatheredlight/" target="_blank"><i class="fab fa-instagram"></i>Instagram</ai>
+        <ai href="https://chat.whatsapp.com/DajZdHAePvfITPbj9R3io9" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</ai>
+        <ai href="mailto:jgl.bzell@gmail.com" target="_blank"><i class="fas fa-envelope"></i>E-Mail</ai>
 
 </div>
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
