@@ -31,6 +31,7 @@ body {
 /* Formular- und Eingabefelder */
 input[type="text"],
 input[type="email"],
+input[type="number"],
 input[type="tel"],
 select,
 textarea {
@@ -246,7 +247,17 @@ i {
             <input type="email" id="email" name="email" placeholder="Email.." required>
           </div>
         </div>
-
+        
+ 		<!-- Telefon -->
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Telefonnummer</label>
+          </div>
+          <div class="col-75">
+          <input type="tel" id="phone" name="phone" placeholder="Ihre Telefonnummer" required>
+          </div>
+        </div>
+        
         <!-- Kategorie -->
         <div class="row">
           <div class="col-25">
@@ -254,27 +265,81 @@ i {
           </div>
           <div class="col-75">
             <select id="issue" name="issue" onchange="updateVisibility()">
-              <option value="registration" selected>Fragen</option>
-              <option value="question">Anmeldung</option>
+            <option value="option" disabled selected>Option auswählen</option>
+              <option value="kg">Anmeldung Kleingruppe</option>
+              <option value="registration">Anmeldung JGL-treffen</option>
+              <option value="question">Fragen</option>
               <option value="feedback">Feedback & Ideen</option>
-              <option value="feedback">Kleingruppe Anmelden</option>
-            </select>
+               </select>
           </div>
         </div>
-  <!-- Kleingruppe -->
+<!-- Kleingruppe -->
+<div id="kg-section" class="hidden">
+     <div class="row">
+    <div class="col-25">
+      <label for="age">Alter</label>
+    </div>
+    <div class="col-75">
+      <input type="number" id="age" name="age" placeholder="Dein Alter">
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="gk">Kleingruppe Anmeldung</label>
+    </div>
+    <div class="col-75">
+      <textarea id="gk" name="beschreib" placeholder="Was genau suchst du? Was ist dir wichtig?" style="height:100px; width: 100%;"></textarea>
+        <div style="margin-top: 10px;">
+  </div>
+</div>
+</div>
+</div>
+     
+        <!-- JGL Anmeldung -->
         <div id="registration-section" class="hidden">
           <div class="row">
             <div class="col-25">
-              <label for="question">Kleingruppe Anmeldung</label>
+              <label for="course">Wann bist du dabei?</label>
             </div>
             <div class="col-75">
-              <textarea id="question" name="question" placeholder="Stellen Sie Ihre Frage..." style="height:200px"></textarea>
+              <select id="course" name="course">
+                <option value="22-12-morning">Start: 24.04.2025 - 17:30-21:00 (optional)</option>
+                <option value="22-12-evening">Worship-Abend: 15.05.2025 - 19:00-20:30 (optional)</option>
+                <option value="08-01-morning">Bräteln am Fluss: 21.06.2025 - ca. 16:00 (optional)</option>
+              </select>
             </div>
           </div>
-        </div>
+         <!-- JGL Anmeldung _ Mitbringer-->
 
-        <!-- Fragen -->
-        <div id="registration-section" class="hidden">
+            <div class="row">
+        <div class="col-25">
+          <label for="ja-nein">Bringst du jemanden mit?</label>
+        </div>
+        <div class="col-75">
+          <select id="ja-nein" name="ja-nein" onchange="toggleAnzahlAbfrage()" required>
+            <option value="ja">Ja</option>
+            <option value="nein" selected>Nein</option>
+          </select>
+        </div>
+      </div>
+      
+        <!-- Anzahl Eingabe, wird nur bei "Ja" angezeigt -->
+  <div id="anzahl-section" style="display: none;">
+    <div class="row">
+      <div class="col-25">
+        <label for="anzahl">Wie viele?</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="anzahl" name="anzahl" placeholder="Wie viele Personen begleiten dich?" min="1">
+      </div>
+    </div>
+  </div>
+</div>
+  		 <!-- Fragen -->
+        <div id="question-section" class="hidden">
           <div class="row">
             <div class="col-25">
               <label for="question">Fragen</label>
@@ -284,25 +349,7 @@ i {
             </div>
           </div>
         </div>
-
-        <!-- Kurs Anmeldung -->
-        <div id="question-section" class="hidden">
-          <div class="row">
-            <div class="col-25">
-              <label for="course">Kurs wählen</label>
-            </div>
-            <div class="col-75">
-              <select id="course" name="course">
-                <option value="22-12-morning">22.12.2024 - 09:30-12:00</option>
-                <option value="22-12-evening">22.12.2024 - 19:00-21:30</option>
-                <option value="08-01-morning">08.01.2025 - 09:30-12:00</option>
-                <option value="08-01-evening">08.01.2025 - 19:00-21:30</option>
-                <option value="12-01-afternoon">12.01.2025 - 15:00-17:30</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
+        
         <!-- Feedback -->
         <div id="feedback-section" class="hidden">
           <div class="row">
@@ -323,7 +370,22 @@ i {
     </div>
 
   <script>
+  
+   // Funktion, die die Anzeige der Anzahl-Eingabe steuert - JGL Anmeldung
+  function toggleAnzahlAbfrage() {
+    var jaNeinSelect = document.getElementById("ja-nein");
+    var anzahlSection = document.getElementById("anzahl-section");
+
+    // Wenn "Ja" ausgewählt ist, wird die Anzahl-Abfrage angezeigt
+    if (jaNeinSelect.value === "ja") {
+      anzahlSection.style.display = "block";
+    } else {
+      // Wenn "Nein" ausgewählt ist, wird die Anzahl-Abfrage versteckt
+      anzahlSection.style.display = "none";
+    }
+  }
     function updateVisibility() {
+      document.getElementById("kg-section").classList.add("hidden");
       document.getElementById("registration-section").classList.add("hidden");
       document.getElementById("question-section").classList.add("hidden");
       document.getElementById("feedback-section").classList.add("hidden");
@@ -335,10 +397,22 @@ i {
         document.getElementById("question-section").classList.remove("hidden");
       } else if (issue === "feedback") {
         document.getElementById("feedback-section").classList.remove("hidden");
+      } else if (issue === "kg") {
+        document.getElementById("kg-section").classList.remove("hidden");
       }
     }
+    
+    function disableDefaultOption() {
+      var chooseSelect = document.getElementById("choose");
+      var defaultOption = chooseSelect.querySelector('option[value=""]');
+      if (chooseSelect.value !== "") {
+        defaultOption.disabled = true; // "Wählen Sie eine Option" deaktivieren
+      }
+    }
+    
+    
   </script>
-
+<p>*optional: Die Anmeldung ist nicht erforderlich, du tust uns bei der Planung jedoch einen grossen gefallen</p><br>
   <h1>Kontaktdaten</h1>
   <p>Bei persönlichen Fragen stehen dir gerne die Jugendarbeiterinnen der reformierten und katholischen Kirche zur Verfügung.</p>
    <center>
