@@ -442,6 +442,22 @@ i {
         <ai href="mailto:jgl.bzell@gmail.com" target="_blank"><i class="fas fa-envelope"></i>E-Mail</ai>
 
 </div>
+
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const aiElements = document.querySelectorAll("ai");
+
+        aiElements.forEach((ai) => {
+            ai.style.cursor = "pointer"; // Ändert den Cursor auf "Hand"
+            ai.addEventListener("click", function () {
+                const url = ai.getAttribute("href");
+                if (url) {
+                    window.open(url, "_blank"); // Öffnet den Link in einem neuen Tab
+                }
+            });
+        });
+    });
+  </script>
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
 </body>
 </html>
