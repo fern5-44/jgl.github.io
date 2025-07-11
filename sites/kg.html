@@ -1,34 +1,132 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Die Idee – Kleingruppen</title>
   <style>
-  .main { padding: 16px; margin-top: 60px; height: auto; text-align: center; }
-  body {
-    font-family: "Georgia", serif;
-    text-align: center;
-    color: #21201E;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
+    body {
+      font-family: "Georgia", serif;
+      color: #21201E;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .main {
+      padding: 16px;
+      margin-top: 60px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    .section {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "•";
+      margin-right: 0.5em;
+    }
 
 
+    blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #ccc;
+      padding-left: 10px;
+      margin: 20px auto;
+      max-width: 700px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #005A9C;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .center {
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
+
   <!-- Container für die Navigationsleiste -->
   <div id="navbar-container"></div>
-<div class="main">
-<h1>Die Idee</h1>
-<img src="https://fern5-44.github.io/jgl.github.io/pic/KGK.JPEG" alt="Kleingruppe Konzept" height="60%" width="60%">
-<p></p>
-<h1>Kleingruppe Gesucht?</h1>
+
+  <div class="main">
+    <h1>Die Idee</h1>
+    <img src="https://fern5-44.github.io/jgl.github.io/pic/KGK.JPEG" alt="Kleingruppe Konzept">
+
+    <div class="section">
+      <h2>Was ist eine Kleingruppe?</h2>
+      <p>
+        Eine Kleingruppe besteht aus 3-10 Personen, die sich regelmäßig treffen – wir empfehlen alle zwei Wochen. Gemeinsam Bibel lesen, für persönliche Anliegen beten und sich über verschiedenste Themen austauschen gehört alles in die Kleingruppe.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Warum Kleingruppen?</h2>
+      <ul>
+        <li>Persönliches geistliches Wachstum</li>
+        <li>Echte, enge Beziehungen</li>
+        <li>Gegenseitige Ermutigung und Austausch</li>
+        <li>Raum für Fragen, Zweifel und Freude</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Wie funktioniert es?</h2>
+      <p>
+        Du meldest dich über unser Formular an. Wir bringen dich mit einer passenden Gruppe in deinem Alter und deinem Interessensgebiet in Verbindung. Dann lernst du die Gruppe bei einem ersten Treffen kennen und entscheidest dich, ob du dabei bleiben willst.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Was sagen andere?</h2>
+      <blockquote>
+        „In meiner Kleingruppe habe ich echte Freunde gefunden – wir tragen uns gegenseitig im Gebet.“
+      </blockquote>
+      <blockquote>
+        „Ich dachte zuerst, ich sei allein mit meinen Fragen. Die Kleingruppe hat mir gezeigt: Das stimmt nicht.“
+      </blockquote>
+    </div>
+
+    <div class="center">
+      <h2>Kleingruppe gesucht?</h2>
+      <a href="https://fern5-44.github.io/jgl.github.io/reference.html" class="cta-button">Jetzt anmelden</a>
+    </div>
   </div>
 
-</body>
-
-  <!-- JavaScript einfügen -->
+  <!-- JavaScript für Navbar -->
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
+</body>
 </html>
