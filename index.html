@@ -1,57 +1,170 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  body {
-    font-family: "Georgia", serif;
-    text-align: center;
-    color: #21201E;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-a {
-   color: #7F7F6F;
-   }
-  .main { padding: 16px; margin-top: 60px; height: auto; }
-  <link rel="stylesheet" href="https://fern5-44.github.io/jgl.github.io/tool/style.css"> <!-- Falls du CSS auslagerst -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gathered Light - JGL</title>
 
+  <style>
+    /* Reset & Basics */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f0;
+      color: #21201E;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    a {
+      color: #7F7F6F;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #2C3E50;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin-bottom: 0.3em;
+      color: #2C3E50;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-bottom: 1.5em;
+      max-width: 650px;
+      color: #555A66;
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 1em auto 2em;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      margin-bottom: 1.5em;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+    }
+
+    .event {
+      background: #fff;
+      padding: 25px 30px;
+      margin-bottom: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(44, 62, 80, 0.15);
+      max-width: 700px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .event:hover {
+      box-shadow: 0 18px 40px rgba(44, 62, 80, 0.25);
+    }
+
+    .event h1 {
+      font-size: 2rem;
+      color: #1A1F36;
+      margin-bottom: 0.7em;
+    }
+
+    .event h3 {
+      color: #3B4B6B;
+      font-weight: 500;
+      margin-bottom: 1em;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2C3E50;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(44, 62, 80, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 1em;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: #415a77;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(65, 90, 119, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .event {
+        padding: 20px;
+      }
+      .event h1 {
+        font-size: 1.6rem;
+      }
+    }
+.main { padding: 16px; margin-top: 60px; height: auto; }
   </style>
-  <title>JGL</title>
 </head>
 
 <body>
-  <!-- Container für die Navigationsleiste -->
+  <!-- Navbar placeholder -->
   <div id="navbar-container"></div>
 <div class="main">
-<center>
-<h1>Gathered Light</h1>
 
-<h3>Suchst du einen Ort um mit Freunden eine gute Zeit zu verbringen und dabei gelichzeitig im Glauben tiefere Wurzeln zu schlagen? Dann schau mal bei der JGL vorbei.</h3>
-  <img src="https://fern5-44.github.io/jgl.github.io/pic/logo.PNG" alt="LOGO" width=60% height=65%>
-<br><br>
-<h1>Unser Start: 26.04.2025: Pizzaessen & Kennenlernen</h1>
-<img src="https://i.pinimg.com/736x/03/d9/c1/03d9c12b7e04e1a6d323d89792961e1c.jpg" alt="Pizza" width=35% height=25%>
-<p>17:30 bis ca. 21:00 im" Evangelischen Kirchenzentrum Bischofszell.<br>Erfahre mehr über die JGL und usere Ziele. Lerne neue Leute kennen und starte mit uns gemeinsam in das neue Projekt. </p>
-<br><br>
+    <h1>Gathered Light</h1>
+    <h3>Suchst du einen Ort, um mit Freunden eine gute Zeit zu verbringen und dabei gleichzeitig im Glauben tiefere Wurzeln zu schlagen? Dann schau mal bei der JGL vorbei.</h3>
+    <img src="https://fern5-44.github.io/jgl.github.io/pic/logo.PNG" alt="JGL Logo" style="max-width: 320px; margin-bottom: 40px;" />
 
-<h1>15.05.2025: Worship-Abend</h1>
-<img src="https://i.pinimg.com/736x/33/d9/66/33d9668396437fbeb401701d76ae1615.jpg" alt="worship" width=35% height=25%>
-<h3>19:00 bis ca. 20:30 im Evangelischen Kirchenzentrum Bischofszell</h3>
-<p>Lobe mit uns Gott und geniesse eine entspannte Zeit in unserer Gemeinschaft.</p>
-<br><br>
-<h1>21.06.2025: Bräteln am Fluss</h1>
-<img src="https://media.istockphoto.com/id/1289990574/de/vektor/familie-oder-freund-charaktere-verbringen-zeit-auf-outdoor-bbq-menschen-die-wurst-und.jpg?s=612x612&w=0&k=20&c=iiqRP6wKYS-_1pqb1NVTUNNKDPZ-dSX0mos4SzZPMVQ=" alt="grillieren" width=40% height=30%>
-<h3>Treffpunkt: Evangelischen Kirchenzentrum Bischofszell um 16:00</h3>
-<p>Beim heissen Wetter in der Thur baden, gemeinsam Essen und uns austauschen... Offizieller Anlass dauert bis ca. 19:00, anschliessend OPEN END.</p>
+    <section class="event">
+      <h1>Unser Start: 26.04.2025 – Pizzaessen & Kennenlernen</h1>
+      <img src="https://i.pinimg.com/736x/03/d9/c1/03d9c12b7e04e1a6d323d89792961e1c.jpg" alt="Pizza" />
+      <p>17:30 bis ca. 21:00 im Evangelischen Kirchenzentrum Bischofszell.<br />
+      Erfahre mehr über die JGL und unsere Ziele. Lerne neue Leute kennen und starte mit uns gemeinsam in das neue Projekt.</p>
+      <a href="#" class="button">Mehr erfahren</a>
+    </section>
 
+    <section class="event">
+      <h1>15.05.2025 – Worship-Abend</h1>
+      <img src="https://i.pinimg.com/736x/33/d9/66/33d9668396437fbeb401701d76ae1615.jpg" alt="Worship" />
+      <h3>19:00 bis ca. 20:30 im Evangelischen Kirchenzentrum Bischofszell</h3>
+      <p>Lobe mit uns Gott und genieße eine entspannte Zeit in unserer Gemeinschaft.</p>
+      <a href="#" class="button">Mitmachen</a>
+    </section>
 
-</center>
-  </div>
-
-</body>
-
-  <!-- JavaScript einfügen -->
+    <section class="event">
+      <h1>21.06.2025 – Bräteln am Fluss</h1>
+      <img src="https://media.istockphoto.com/id/1289990574/de/vektor/familie-oder-freund-charaktere-verbringen-zeit-auf-outdoor-bbq-menschen-die-wurst-und.jpg?s=612x612&w=0&k=20&c=iiqRP6wKYS-_1pqb1NVTUNNKDPZ-dSX0mos4SzZPMVQ=" alt="Grillen am Fluss" />
+      <h3>Treffpunkt: Evangelisches Kirchenzentrum Bischofszell um 16:00</h3>
+      <p>Beim heißen Wetter in der Thur baden, gemeinsam Essen und uns austauschen... Offizieller Anlass dauert bis ca. 19:00, anschließend OPEN END.</p>
+      <a href="#" class="button">Details</a>
+    </section>
+</div>
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
+</body>
 </html>
