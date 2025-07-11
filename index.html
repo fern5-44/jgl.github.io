@@ -135,30 +135,71 @@
     <h3>Suchst du einen Ort, um mit Freunden eine gute Zeit zu verbringen und dabei gleichzeitig im Glauben tiefere Wurzeln zu schlagen? Dann schau mal bei der JGL vorbei.</h3>
     <img src="https://fern5-44.github.io/jgl.github.io/pic/logo.PNG" alt="JGL Logo" style="max-width: 320px; margin-bottom: 40px;" />
 
-    <section class="event">
-      <h1>Unser Start: 26.04.2025 – Pizzaessen & Kennenlernen</h1>
-      <img src="https://i.pinimg.com/736x/03/d9/c1/03d9c12b7e04e1a6d323d89792961e1c.jpg" alt="Pizza" />
-      <p>17:30 bis ca. 21:00 im Evangelischen Kirchenzentrum Bischofszell.<br />
-      Erfahre mehr über die JGL und unsere Ziele. Lerne neue Leute kennen und starte mit uns gemeinsam in das neue Projekt.</p>
-      <a href="#" class="button">Mehr erfahren</a>
-    </section>
+ <section class="event">
+    <h1>Unser Start: 26.04.2025 – Pizzaessen & Kennenlernen</h1>
+    <img src="https://i.pinimg.com/736x/03/d9/c1/03d9c12b7e04e1a6d323d89792961e1c.jpg" alt="Pizza" />
+    <p>17:30 bis ca. 21:00 im Evangelischen Kirchenzentrum Bischofszell.<br />
+    Erfahre mehr über die JGL und unsere Ziele. Lerne neue Leute kennen und starte mit uns gemeinsam in das neue Projekt.</p>
+    
+    <button class="button toggle-btn" aria-expanded="false" aria-controls="extra-info-1">Mehr erfahren</button>
+    
+    <div id="extra-info-1" class="extra-info" hidden>
+      <p>Hier findest du weitere Details zum Pizzaessen & Kennenlernen: Es gibt leckere Pizza, Getränke, Musik und viel Zeit zum Austausch. Jeder ist herzlich willkommen, ob neu oder altbekannt.</p>
+      <p>Der Anlass ist ideal, um die anderen Mitglieder kennenzulernen und mehr über die geplanten Aktivitäten zu erfahren.</p>
+    </div>
+  </section>
 
-    <section class="event">
-      <h1>15.05.2025 – Worship-Abend</h1>
-      <img src="https://i.pinimg.com/736x/33/d9/66/33d9668396437fbeb401701d76ae1615.jpg" alt="Worship" />
-      <h3>19:00 bis ca. 20:30 im Evangelischen Kirchenzentrum Bischofszell</h3>
-      <p>Lobe mit uns Gott und genieße eine entspannte Zeit in unserer Gemeinschaft.</p>
-      <a href="#" class="button">Mitmachen</a>
-    </section>
+  <section class="event">
+    <h1>15.05.2025 – Worship-Abend</h1>
+    <img src="https://i.pinimg.com/736x/33/d9/66/33d9668396437fbeb401701d76ae1615.jpg" alt="Worship" />
+    <h3>19:00 bis ca. 20:30 im Evangelischen Kirchenzentrum Bischofszell</h3>
+    <p>Lobe mit uns Gott und genieße eine entspannte Zeit in unserer Gemeinschaft.</p>
 
-    <section class="event">
-      <h1>21.06.2025 – Bräteln am Fluss</h1>
-      <img src="https://media.istockphoto.com/id/1289990574/de/vektor/familie-oder-freund-charaktere-verbringen-zeit-auf-outdoor-bbq-menschen-die-wurst-und.jpg?s=612x612&w=0&k=20&c=iiqRP6wKYS-_1pqb1NVTUNNKDPZ-dSX0mos4SzZPMVQ=" alt="Grillen am Fluss" />
-      <h3>Treffpunkt: Evangelisches Kirchenzentrum Bischofszell um 16:00</h3>
-      <p>Beim heißen Wetter in der Thur baden, gemeinsam Essen und uns austauschen... Offizieller Anlass dauert bis ca. 19:00, anschließend OPEN END.</p>
-      <a href="#" class="button">Details</a>
-    </section>
+    <button class="button toggle-btn" aria-expanded="false" aria-controls="extra-info-2">Mehr erfahren</button>
+
+    <div id="extra-info-2" class="extra-info" hidden>
+      <p>Der Worship-Abend bietet eine Atmosphäre voller Musik, Gebet und Gemeinschaft. Es ist der perfekte Ort, um Kraft zu tanken und sich mit Gleichgesinnten auszutauschen.</p>
+      <p>Jeder ist herzlich eingeladen, egal ob erfahren im Worship oder ganz neu dabei.</p>
+    </div>
+  </section>
+
+  <section class="event">
+    <h1>21.06.2025 – Bräteln am Fluss</h1>
+    <img src="https://media.istockphoto.com/id/1289990574/de/vektor/familie-oder-freund-charaktere-verbringen-zeit-auf-outdoor-bbq-menschen-die-wurst-und.jpg?s=612x612&w=0&k=20&c=iiqRP6wKYS-_1pqb1NVTUNNKDPZ-dSX0mos4SzZPMVQ=" alt="Grillen am Fluss" />
+    <h3>Treffpunkt: Evangelisches Kirchenzentrum Bischofszell um 16:00</h3>
+    <p>Beim heißen Wetter in der Thur baden, gemeinsam Essen und uns austauschen... Offizieller Anlass dauert bis ca. 19:00, anschließend OPEN END.</p>
+
+    <button class="button toggle-btn" aria-expanded="false" aria-controls="extra-info-3">Mehr erfahren</button>
+
+    <div id="extra-info-3" class="extra-info" hidden>
+      <p>Der Brätel-Event ist eine entspannte Outdoor-Veranstaltung mit Grillieren, Baden und guter Gesellschaft. Perfekt, um den Sommer zu genießen und neue Leute zu treffen.</p>
+      <p>Bring gerne deine Lieblingssnacks und Getränke mit!</p>
+    </div>
+  </section>
+
 </div>
   <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
+  <script>
+    // Alle Buttons mit Klasse .toggle-btn auswählen
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const contentId = btn.getAttribute('aria-controls');
+        const content = document.getElementById(contentId);
+        const isHidden = content.hasAttribute('hidden');
+
+        if (isHidden) {
+          content.removeAttribute('hidden');
+          btn.textContent = 'Weniger anzeigen';
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          content.setAttribute('hidden', '');
+          btn.textContent = 'Mehr erfahren';
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
