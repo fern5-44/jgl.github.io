@@ -1,137 +1,152 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  margin: 0;
-  padding: 0;
-}
+  <meta charset="UTF-8">
+  <title>Jugendevents</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
 
-.main {
+    .main {
   padding: 20px;
   text-align: center;
+  margin-top: 80px; /* NEU: Abstand zur Navbar */
 }
 
-.event-card {
-  background-color: white;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 1000px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
-.event-card h1 {
-  margin-bottom: 10px;
-}
+    .event-card {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1000px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-.event-card p {
-  color: #555;
-  line-height: 1.5;
-}
+    .event-card h1 {
+      margin-bottom: 10px;
+    }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  margin-top: 15px;
-}
+    .event-card p {
+      color: #555;
+      line-height: 1.5;
+    }
 
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
 
-a {
-  color: #007BFF;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
-</style>
+    a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px; /* Abstand zum vorherigen Element */
+    }
 
-
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <!-- Container für die Navigationsleiste -->
+
+  <!-- Navigation -->
   <div id="navbar-container"></div>
-	<div class="main">
+
+  <div class="main">
+
+    <!-- Event-Beispiel -->
     <div class="event-card">
       <h1>Jugendgruppe geht nach PARIS!!!</h1>
       <p><strong>07. - 10. August 2025</strong></p>
       <p>Vier Tage lang pures Real Life – das krasseste DIY-Festival!</p>
 
       <div class="gallery">
-        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/17/15/6d/d6/paris.jpg" alt="Macherfestival Hauptbild">
-        <img src="https://plus.unsplash.com/premium_photo-1665669263531-cdcbe18e7fe4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlbmNoJTIwYmFrZXJ5fGVufDB8fDB8fHww">
-        <img src="https://www.parisconnection.fr/wp-content/uploads/paris-city-500x300.jpg" alt="Jugendliche beim Arbeiten">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/17/15/6d/d6/paris.jpg" alt="Paris Eiffelturm">
+        <img src="https://plus.unsplash.com/premium_photo-1665669263531-cdcbe18e7fe4?fm=jpg&q=60&w=3000" alt="Bäckerei Paris">
+        <img src="https://www.parisconnection.fr/wp-content/uploads/paris-city-500x300.jpg" alt="Stadtansicht Paris">
       </div>
 
       <a href="https://internetkirche.ch/">Webseite: internetkirche.ch</a>
     </div>
-  		<div class="event-card">
-        <h1>Godi</h1>
-        <p><strong>1x im Monat</strong></p>
-        <p>Vier Tage lang pures Real Life – das krasseste DIY-Festival!</p>
 
-        <div class="gallery">
-          <img src="https://godi-amriswil.ch/wp-content/uploads/2020/05/GO13CB1-960x636.jpg" alt="Macherfestival Hauptbild">
-          <img src="https://godi-amriswil.ch/wp-content/uploads/2020/05/godi_conf18_sonntag_ta_wq_014-1-960x636.jpg">
-          <img src="https://vivakirche-amriswil.ch/wp-content/uploads/2019/07/godi_conf18_sonntag_ta_wq_007-1024x683.jpg" alt="Jugendliche beim Arbeiten">
-        </div>
+    <!-- Wiederhole das für andere Events -->
 
-        <a href="https://godi-amriswil.ch/">Webseite: godi-amriswil.ch</a>
-		</div>
-  		<div class="event-card">
-        <h1>MELO</h1>
-        <p><strong>13. - 15. Juni 2025</strong></p>
-        <p>Das Melo ist das christliche Jugendfestival im Juni – vollgepackt mit starken Impulsen …</p>
+    <div class="event-card">
+      <h1>Godi</h1>
+      <p><strong>1x im Monat</strong></p>
+      <p>Jugendgottesdienst mit Worship und starken Messages.</p>
 
-        <div class="gallery">
-          <img src="https://melo.ch/wp/wp-content/uploads/2023/06/52157758175_bc341a57ce_k.jpg" alt="Melo Bild 1">
-          <img src="https://www.jesus.de/wp-content/uploads/2025/06/melo-festival-3.jpg" alt="Festival Stimmung">
-          <img src="https://melo.ch/wp/wp-content/uploads/2023/06/52154679868_dd8049b924_k-2047x1151.jpg" alt="Jugendgruppe">
-        </div>
+      <div class="gallery">
+        <img src="https://godi-amriswil.ch/wp-content/uploads/2020/05/GO13CB1-960x636.jpg" alt="Godi Bühne">
+        <img src="https://godi-amriswil.ch/wp-content/uploads/2020/05/godi_conf18_sonntag_ta_wq_014-1-960x636.jpg" alt="Godi Worship">
+        <img src="https://vivakirche-amriswil.ch/wp-content/uploads/2019/07/godi_conf18_sonntag_ta_wq_007-1024x683.jpg" alt="Teilnehmer Godi">
+      </div>
 
-        <a href="https://melo.ch/">Webseite: melo.ch</a>
-      	</div>
- 
-	<div class="event-card">
+      <a href="https://godi-amriswil.ch/">Webseite: godi-amriswil.ch</a>
+    </div>
+
+    <div class="event-card">
+      <h1>MELO</h1>
+      <p><strong>13. - 15. Juni 2025</strong></p>
+      <p>Das Melo ist das christliche Jugendfestival im Juni – vollgepackt mit starken Impulsen …</p>
+
+      <div class="gallery">
+        <img src="https://melo.ch/wp/wp-content/uploads/2023/06/52157758175_bc341a57ce_k.jpg" alt="MELO Bühne">
+        <img src="https://www.jesus.de/wp-content/uploads/2025/06/melo-festival-3.jpg" alt="Festival Gelände">
+        <img src="https://melo.ch/wp/wp-content/uploads/2023/06/52154679868_dd8049b924_k-2047x1151.jpg" alt="MELO Teilnehmer">
+      </div>
+
+      <a href="https://melo.ch/">Webseite: melo.ch</a>
+    </div>
+
+    <div class="event-card">
       <h1>Macherfestival</h1>
       <p><strong>07. - 10. August 2025</strong></p>
       <p>Vier Tage lang pures Real Life – das krasseste DIY-Festival!</p>
 
       <div class="gallery">
-        <img src="https://www.zeppelin-rental.de/sites/default/files/styles/default_1050/public/2024-10/Zeppelin-Rental-Macher-Festival-2024-19857.jpg.webp?itok=KL7qPePg" alt="Macherfestival Hauptbild">
-        <img src="https://media.hornbach.de/cmsm/de/chke2-bf/9ae3cbf5c389c71dcff8d180849875/macherfestival-2024-stationen-992x661.jpg" alt="DIY Bauaktion">
-        <img src="https://bmg-images.forward-publishing.io/2024/08/26/27642e3f-cd91-4d08-b246-52d1748fcfc9.jpeg?rect=0%2C0%2C4000%2C2667&w=1024&auto=format" alt="Jugendliche beim Arbeiten">
+        <img src="https://www.zeppelin-rental.de/sites/default/files/styles/default_1050/public/2024-10/Zeppelin-Rental-Macher-Festival-2024-19857.jpg.webp?itok=KL7qPePg" alt="Bühne Bauaktion">
+        <img src="https://media.hornbach.de/cmsm/de/chke2-bf/9ae3cbf5c389c71dcff8d180849875/macherfestival-2024-stationen-992x661.jpg" alt="Bauprojekt DIY">
+        <img src="https://bmg-images.forward-publishing.io/2024/08/26/27642e3f-cd91-4d08-b246-52d1748fcfc9.jpeg?rect=0%2C0%2C4000%2C2667&w=1024&auto=format" alt="Werkzeuge Action">
       </div>
+
       <a href="https://macherfestival.io/">Webseite: macherfestival.io</a>
-      </div>
-  <div class="event-card">
-    <h1>Praisecamp</h1>
-    <p><strong>27. Dezember 2026 – 1. Januar 2027</strong></p>
-    <p>Vier Tage lang pures Real Life – das krasseste DIY-Festival!</p>
-
-    <div class="gallery">
-      <img src="https://www.kath.ch/wp-content/uploads/sites/2/2016/12/praieecamp.jpg" alt="Macherfestival Hauptbild">
-      <img src="https://cdn.unitycms.io/images/A0tJKfFtKDcBKILgwIqxrh.jpg?op=ocroped&val=1200,800,1000,1000,0,0&sum=nxkbzosWKx4">
-      <img src="https://cdn.unitycms.io/images/0vJv4phq4VRAByQIowesUP.jpg" alt="Jugendliche beim Arbeiten">
     </div>
-    <a href="https://praisecamp.ch/">Webseite: praisecamp.ch</a>
- 	</div>
 
-</div>
+    <div class="event-card">
+      <h1>Praisecamp</h1>
+      <p><strong>27. Dezember 2026 – 1. Januar 2027</strong></p>
+      <p>Das grösste christliche Jugendcamp der Schweiz – Worship, Tiefgang, Action.</p>
 
+      <div class="gallery">
+        <img src="https://www.kath.ch/wp-content/uploads/sites/2/2016/12/praieecamp.jpg" alt="Praisecamp Halle">
+        <img src="https://cdn.unitycms.io/images/A0tJKfFtKDcBKILgwIqxrh.jpg?op=ocroped&val=1200,800,1000,1000,0,0&sum=nxkbzosWKx4" alt="Worship Crowd">
+        <img src="https://cdn.unitycms.io/images/0vJv4phq4VRAByQIowesUP.jpg" alt="Workshops Jugend">
+      </div>
+
+      <a href="https://praisecamp.ch/">Webseite: praisecamp.ch</a>
+    </div>
+
+  </div>
+
+  <!-- Navbar-Script -->
+  <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
 
 </body>
-
-  <!-- JavaScript einfügen -->
-  <script src="https://fern5-44.github.io/jgl.github.io/tool/navbar.js"></script>
 </html>
